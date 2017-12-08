@@ -7,10 +7,10 @@ AVOGADRO_POWER = 23
 #Check mass to number of atoms
 
 def main():
-    menu_choice = 0
-    while menu_choice != 7:
+    menu_choice = "0"
+    while menu_choice != "7":
         display_menu()
-        menu_choice = int(input("Enter the number matching your selection: "))
+        menu_choice = input("Enter the number matching your selection: ")
         results = handle_choice(menu_choice)
         print(""'\n')
         print (results)
@@ -136,19 +136,19 @@ def quit_program():
 
 
 def handle_choice(menu_choice):
-    if menu_choice == 1:
+    if menu_choice == "1":
         return number_of_moles_to_atoms()
-    elif menu_choice == 2:
+    elif menu_choice == "2":
         return number_of_atoms_to_moles()
-    elif menu_choice == 3:
+    elif menu_choice == "3":
         return mass_from_moles()
-    elif menu_choice == 4:
+    elif menu_choice == "4":
         return moles_from_mass()
-    elif menu_choice == 5:
+    elif menu_choice == "5":
         return mass_to_number_of_atoms()
-    elif menu_choice == 6:
+    elif menu_choice == "6":
         return number_of_atoms_from_mass()
-    elif menu_choice == 7:
+    elif menu_choice == "7":
         return quit_program()
     else:
         print("Invalid selection.")
